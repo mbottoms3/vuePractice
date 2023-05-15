@@ -1,17 +1,19 @@
 <template>
   <div class="container">
     <Header title="Task Tracker" />
+    <Tasks :tasks="tasks" />
   </div>
 </template>
 
 <script>
-import { createHydrationRenderer } from "vue";
+import Tasks from "./components/Tasks.vue";
 import Header from "./components/Header.vue";
 
 export default {
   name: "App",
   components: {
     Header,
+    Tasks,
   },
   data() {
     return {
